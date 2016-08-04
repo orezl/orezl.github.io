@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calcy Baba</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- W3CSS             Latest compiled and minified W3CSS -->
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<link rel="stylesheet" href="css/w3.css">
+<script src="javascript/new_js.js"></script>
+<script src="javascript/jquery-1.12.4.js"></script>
+<script src="javascript/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+
+.over{opacity:.8;color: grey}
+.over:hover{opacity:1;   -webkit-transform: scale(1.3, 1.3); /* Safari      rotateY(360deg) */
+    transform: scale(1.3, 1.3)  ;    
+}
+/*
+#fb:hover{color: white;  text-shadow: 2px 2px blue,-2px -2px blue;}
+#gp:hover{color: white;  text-shadow: 2px 2px red,-2px -2px red;}
+#wa:hover{color: white;  text-shadow: 2px 2px green,-2px -2px green;}
+#sk:hover{color: white;  text-shadow: 2px 2px   #AFEEEE,-2px -2px  #AFEEEE;}
+#ld:hover{color: white;  text-shadow: 2px 2px   #6A5ACD,-2px -2px  #6A5ACD;}*/
+
+#fb:hover{color: blue;  }
+#gp:hover{color: red; }
+#wa:hover{color:  #00FA9A; }
+#sk:hover{color:  #00FFFF }
+#ld:hover{color:  #1E90FF  }
+
+
+
+#intern{ height: 310px;width: 90%;margin-left: 200px;
+  background-image: url('https://www.google.com/maps/api/staticmap?center=Lamhas+Satellite+Services+Ltd&zoom=15&size=2000x2000&center=Lamhas+Satellite+Services+Ltd&scale=4&maptype=roadmap&markers=color:red%7Clabel:S%7C28.56111,%2077.21715');background-position:  -30px;background-repeat:  no-repeat;background-attachment: fixed;}
+
+@-webkit-keyframes level2 {
+    0%   {background-color:black; }
+    34%  { background: -webkit-linear-gradient(black,black,black,,black,black,black,black,black,  #00CED1,    #00FFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black,black,black,,black,black,black,black,black,  #00CED1,    #00FFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black,black,black,,black,black,black,black,black,  #00CED1,    #00FFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black,black,black,,black,black,black,black,black, #00CED1,    #00FFFF); /* Standard syntax */}
+    
+    75% { background: -webkit-linear-gradient(black,black,black,black,yellow,yellow,    #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black,black,black,black,black,yellow,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black,black,black,black,black,yellow,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black,black,black,black,black,yellow,    #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* Standard syntax */}
+    100%   {background-color:black; }
+}
+
+@-webkit-keyframes level1 {
+    0%   {background-color:black; }
+    50%  { background: -webkit-linear-gradient(black,black,black,black,black,black,black,#7FFF00, #00CED1,    #00FFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black,black,black,black,black,black,black,#7FFF00,  #00CED1,    #00FFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black,black,black,black,black,black,black,#7FFF00,  #00CED1,    #00FFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black,black,black,black,black,black,black,#7FFF00, #00CED1,    #00FFFF); /* Standard syntax */}
+    100%   {background-color:black; }
+    
+}
+
+@-webkit-keyframes level3 {
+    0%   {background-color:black; }
+    25%  { background: -webkit-linear-gradient(black,black,black,,black,black,black,black,black,  #00CED1,    #00FFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black,black,black,,black,black,black,black,black,  #00CED1,    #00FFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black,black,black,,black,black,black,black,black,  #00CED1,    #00FFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black,black,black,,black,black,black,black,black, #00CED1,    #00FFFF); /* Standard syntax */}
+    
+    50% { background: -webkit-linear-gradient(black,black,black,black,black,black,    #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black,black,black,black,black,black,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black,black,black,black,black,black,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black,black,black,black,black,black,    #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* Standard syntax */}
+
+    75% { background: -webkit-linear-gradient(black,black,black,black,gold,yellow,    #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black,black,black,black,gold,yellow,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black,black,black,black,gold,yellow,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black,black,black,black,gold, yellow ,  #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* Standard syntax */}
+
+    100%   {background-color:black; }
+}
+
+@-webkit-keyframes level4 {
+    0%   {background-color:black; }
+    20%  { background: -webkit-linear-gradient(black,black,black,,black,black,black,black,black,  #00CED1,    #00FFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black,black,black,,black,black,black,black,black,  #00CED1,    #00FFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black,black,black,,black,black,black,black,black,  #00CED1,    #00FFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black,black,black,,black,black,black,black,black, #00CED1,    #00FFFF); /* Standard syntax */}
+    
+    40% { background: -webkit-linear-gradient(black,black,black,black,black,black,    #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black,black,black,black,black,black,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black,black,black,black,black,black,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black,black,black,black,black,black,    #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* Standard syntax */}
+
+    60% { background: -webkit-linear-gradient(black,black,black,black,gold,yellow,    #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black,black,black,black,gold,yellow,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black,black,black,black,gold,yellow,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black,black,black,black,gold, yellow ,  #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* Standard syntax */}
+
+    80% { background: -webkit-linear-gradient(black,black,red,#FF8C00,gold,yellow,    #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black,black,red,#FF8C00,gold,yellow,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black,black,red,#FF8C00,gold,yellow,   #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black,black,red,#FF8C00,gold, yellow ,  #ADFF2F,#7FFF00,  #00CED1,    #00FFFF); /* Standard syntax */}
+
+
+    100%   {background-color:black; }
+}
+
+/*.w3-animate-opacity{-webkit-animation:opac 1.5s;animation:opac 1.5s}
+@-webkit-keyframes opac{from{opacity:0} to{opacity:1}}
+@keyframes opac{from{opacity:0} to{opacity:1}} */
+
+.flist{ padding: 10px;border-radius: 0px 10px 10px 0;background:#dedeba;}
+
+#wa {
+    position: relative;
+    display: inline-block;
+    right:18%;top: 10px
+}
+
+#wa #watooltip {
+    visibility: hidden;
+    width: 10%;
+   
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 0 0;
+    font-size: 15px;
+
+    /* Position the tooltip */
+    position: absolute;right: 70px;top: 35px;
+    z-index: 1;
+}
+
+#wa:hover #watooltip {
+    visibility: visible;}
+</style>
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<TITLE>Know_R.K.</TITLE>
+
+</head>
+<body style='background:white;width:100%;height:100%'>
+  <div style='z-index:10;position:fixed;top:0px;left:0px;background-color : transparent;width:100%;padding-top:8px;padding-bottom:8px;'  id='top'>
+    
+      <div style='margin-top:2px;width:100%;margin-left:8px'><button  type="button"  style='border-radius:60% ;background-image:url(https://i1.sndcdn.com/avatars-000237747881-ysy3hl-t50x50.jpg);background-size:cover;background-repeat:no-repeat;width:5.5%; height:60px;border: 1px solid black' onclick='clk();'>
+          
+  
+    </button>
+    
+    </div>  
+    
+  </div>
+
+  <div id='filist' style='display:block;position:fixed;z-index:12;top:15%;left:-200px;font-size:15px'><ul style='width:auto;list-style-type:none;'><li  class='flist' id='pdf'><a href="pdf/khanna.pdf" download style='text-decoration:none' >Resume&nbsp;<img src="images/pdf.png" width='25px' height='25px'></a></li><br>
+    <li  class='flist' id='stt'><a href="#r"  style='text-decoration:none' >Scroll to top</a></li>
+  </ul></div>
+
+
+
+
+<div style='position:fixed;margin-left:93%;margin-top:15%;z-index:10;line-height: 1.0;text-decoration:none' ><ul style='list-style-type:none;'>
+        <div class='over' id='fb'><li  ><a href="https://www.facebook.com/profile.php?id=100006615694998&fref=ts&__mref=message_bubble"><i class="fa fa-facebook-f" style="font-size:30px;"></i></a></li></div>
+        &nbsp;
+       <div class='over' id='gp'> <li  ><a href="https://plus.google.com/u/1/102236282934504430296"><i class="fa fa-google-plus" style="font-size:30px;"></i></a></li></div>
+        &nbsp;
+        <div class='over' id='ld'><li ><a href="https://in.linkedin.com/in/rahul-khanna-991ab6125"><i class="fa fa-linkedin" style="font-size:30px;"></i></a></li></div>
+       
+        &nbsp;
+       <div class='over' id='sk'> <li  ><a href="skype:rahulkhanna2910@gmail.com"><i class="fa fa-skype" style="font-size:30px"></i></a></li></div>
+        &nbsp;
+        <div class='over' id='wa'><li  ><i class="fa fa-whatsapp" style="font-size:30px"><span id='watooltip'>9999156853</span></i></a></li></div>
+        &nbsp;
+        </ul>
+
+</div>
+
+
+
+  <div class='scroll' style='height:6600px;z-index:4' >
+
+    `<div id='r' style='margin-top:-25px ; background-color:#000020'><img src="images/matrix.jpeg" width='100%' height='700px' style=' opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */' ></div>
+    <div id='rtext' style='position:absolute; top:220px;left:475px; line-height: 1; '><h1 ><b style='color:white;   letter-spacing: 2px;font-size:150%;   'class="w3-border-bottom  w3-border-red" >Rahul Khanna</b></h1>
+      <pre style='color:white; line-height: 1.5;'>         rahulkhanna9953@gmail.com <br>           9787114725,9953658441</pre></div>
+
+
+
+      <div class='r' style='background-color:white ;width:100% ;height:670px'>
+        <div id='bulb'><img src="images/bulb.png" style='margin-top:100px'></div>
+        <div id='ob' style='position:absolute; top:820px;left:475px;font-size:200%;'><h1 style='color:red;text-shadow: 2px 2px black;font-size:180%;'><b>Objective</b>
+        </h1></div>
+        <div id='obtext' style='position:absolute; top:900px;left:525px;'><h4><p style='color:blue'><i>To be part of a company in which I can utilize my skills and gain further experience<br> while
+         enhancing the company’s productivity and reputation.</i></p></h4></div>  </div>
+
+
+
+
+      <div style='background-color:#FFF5EE;width:100% ;height:670px'; id='exp'><div style='margin-left:90px;'> <h1 style='font-size:350%;color:red ;text-shadow: 2px 2px black;'><b>Internship</b><h1></div><div id='intern' ><br><br>
+      <h4 style='color:red;margin-left:5%;margin-top:-50px;font-weight: bold;'><i><pre>NEXT GENERATION NETWORK
+LEADING TO CONVERGENCE…</pre></i></h4>
+      </div>
+      <div id='place' style="border:5px solid white;position:absolute;background-color:black; top:1520px;left:50px; width:200px;height:200px;
+      -ms-transform: rotate(-20deg); /* IE 9 */
+        -webkit-transform: rotate(-20deg); /* Safari */
+        transform: rotate(-20deg);color:white;opacity:0.3;
+      "> <h3 style='text-align:center'>Lamhas Satellite Services Ltd.</h3>
+        <h6 style='text-align:center'>16-A, Uday Plaza, Uday Park, Delhi-110049</h6>
+        <img src="http://www.lamhas.com/wp-content/uploads/2016/02/lssl-new-logo.png" width='50px' height='40px' style='margin-left:140px'>
+      </div>
+
+      <div id='duration' style="border:5px solid white;position:absolute;background-color:black; top:1520px;left:2030px; width:200px;height:120px;
+      -ms-transform: rotate(20deg); /* IE 9 */
+        -webkit-transform: rotate(20deg); /* Safari */
+        transform: rotate(20deg);color:white;
+        opacity:0.3;
+      "> <h3 style='text-align:center'>Duration</h3>
+        <h6 style='text-align:center'>29 Days <br>(1st Dec – 29th Dec 2015)</h6>        
+      </div>
+      <div style='padding-left:70px'><br><h5 style='color:red'><b>About Company:</b></h5>
+        <div  id='about' style='line-height: 1.7;font-size:12px;width:93%' >
+        <p><b>LAMHAS</b> is company which was conceived with a promise to make India a leading competitor in the digital age and in the years that have followed its initiation, the company is well on its way to fulfill the promise made to the Indian masses. In a short span of time LAMHAS has become a premier satellite service provider which has enhanced the digital connectivity and increased the information flow within India.<br>
+        Lamahs’s  head office is located at the International InfoTech Park in Vashi, Navi Mumbai with its branch office located in New Delhi.<br></p><p>
+        It uses cutting edge products in India, which uses cutting edge technology. To achieve this it have partnered with many international companies.
+        It have partnered with highly reputed international companies to introduce top of the line products in India. It have partnered with Dialcom, a premier Spanish Technology Company to introduce Spontania, which is a Web-Conferencing application. Spontania is a true value addition to a variety of industries ranging from e-       Learning, Government sector, Healthcare, Hospitality, Manufacturing and Financial Services. 
+        <br><br></p></div></div>
+      </div>
+
+
+
+
+
+      <div id='education' style='background-color:white ;width:100% ;height:680px;margin-top:-10px;'><h1 style='text-align:center;color:red;font-size:350%;text-shadow: 2px 2px black; '><b>Education</b></h1>
+        <div class='w3-row'>
+          <div class='w3-col m4 l4' id='tenth' style='text-align:center;'><div id='tenb' style='color:white; font-size: 30px;background-color:black;width:120px;height:80px;padding-top:18px;margin:auto;border: 2px solid black;
+            border-radius: 12px;position:relative;transform:translate(450px,0px)'>X<sup>th</sup></div><br></div>
+
+          <div class='w3-col m4 l4' id='twelvth' style='text-align:center;'><div id='twelvb' style='color:white; font-size: 30px;background-color:black;width:120px;height:80px;padding-top:18px;margin:auto;border: 2px solid black;
+            border-radius: 12px;position:relative;z-index:1'>XII<sup>th</sup></div>
+          </div>
+
+          <div class='w3-col m4 l4' id='btech' style='text-align:center;'><div id='btechb' style='color:white; font-size: 30px;background-color:black;width:120px;height:80px;padding-top:18px;margin:auto;border: 2px solid black;
+            border-radius: 12px;position:relative;transform:translate(-450px,0px)'>B.Tech.</div>
+          </div>
+        </div>
+
+        <div class='w3-row'>
+          <div class='w3-col m4 l4' id='tenthl1' style='text-align:center;'><div id='tenl1' ><svg height="100" width="10" style='background-color:black;
+            border-radius: 12px;margin-top:-30px'>
+          <path class="line1" d="M 0 0 v 0 0" stroke="red" stroke-width="100%" fill="none" />
+          </svg></div></div>
+
+          <div class='w3-col m4 l4' id='twelvthl1' style='text-align:center;'><div id='twelvl1'  ><svg height="100" width="10" style='background-color:black;
+            border-radius: 12px;margin-top:-30px'>
+          <path class="line1" d="M 0 0 v 0 0" stroke="red" stroke-width="100%" fill="none" />
+          </svg></div>
+          </div>
+
+          <div class='w3-col m4 l4' id='btechl1' style='text-align:center;'><div id='btechl1'  ><svg height="100" width="10" style='background-color:black;
+            border-radius: 12px;margin-top:-30px'>
+          <path class="line1" d="M 0 0 v 0 0" stroke="red" stroke-width="100%" fill="none" />
+          </svg></div>
+          </div>
+        </div>
+
+        <div class='w3-row'>
+          <div class='w3-col m4 l4' id='tenthb2' style='text-align:center;'><div class='b2' id='teb'  style='background-image:url(images/nlp2.jpg);width:60%;height:225px;padding-top:18px;margin:auto;border: 2px solid black;
+            border-radius: 50%;margin-top:-6px;background-size: 100%;background-repeat:no-repeat;font-size: 15px;'><div style='text-align:center;margin-top:48%;font-weight:bolder'><pre  >CBSE
+Lovely Public Sr. Sec. 
+School[2010]</pre></div>
+          </div>
+        </div>
+
+          <div class='w3-col m4 l4' id='twelvthb2' style='text-align:center;'><div class='b2' id='twb' style='background-image:url(images/nlp2.jpg);width:60%;height:225px;padding-top:18px;margin:auto;border: 2px solid black;
+            border-radius: 50%;margin-top:-6px;background-size: 100%;background-repeat:no-repeat;font-size: 15px;'><div style='text-align:center;margin-top:48%;font-weight:bolder'><pre  >CBSE
+Lovely Public Sr. Sec. 
+School[2010]</pre></div>
+          </div>
+        </div>
+
+
+          <div class='w3-col m4 l4' id='btechb2' style='text-align:center;'><div class='b2' id='vib'  style='background-image:url(images/vit2.jpg);width:60%;height:225px;padding-top:18px;margin:auto;border: 2px solid black;
+            border-radius: 50%;margin-top:-6px; background-size: 120%;background-repeat:no-repeat;font-size: 15px;'><div style='text-align:center;margin-top:55%;font-weight:bolder'><pre  >VIT University,
+Vellore [2017]</pre></div>
+          </div>
+        </div></div>
+
+        <div class='w3-row'>
+          <div class='w3-col m4 l4' id='tenthl2' style='text-align:center;z-index:-1'><div id='tenl2'  ><svg height="100" width="10" style='background-color:black;
+            border-radius: 10px;margin-top:-2px'>
+          <path class="line2" d="M 0 0 v 0 0" stroke="red" stroke-width="100%" fill="none" />
+          </svg></div></div>
+
+          <div class='w3-col m4 l4' id='twelvthl2' style='text-align:center;z-index:-1'><div id='twelvl2'  ><svg height="100" width="10" style='background-color:black;
+            border-radius: 10px;margin-top:-2px'>
+          <path class="line2" d="M 0 0 v 0 0" stroke="red" stroke-width="100%" fill="none" />
+          </svg></div>
+          </div>
+
+          <div class='w3-col m4 l4' id='btechl2' style='text-align:center;z-index:-1'><div id='btechl2'  ><svg height="100" width="10" style='background-color:black;
+            border-radius: 10px;margin-top:-2px'>
+          <path class="line2" d="M 0 0 v 0 0" stroke="red" stroke-width="100%" fill="none" />
+          </svg></div>
+          </div>
+        </div>
+
+        <div class='w3-row'>
+          <div class='w3-col m4 l4' id='tenthb3' style='text-align:center;'><div class='b3' style='background-color:black;width:20%;height:50px;padding-top:18px;margin:auto;border: 2px solid black;
+            border-radius: 40%;margin-top:-8px'><div style='color:white;margin-top:-6px;font-weight:bolder ' >9.2</div></div>
+          </div>
+
+          <div class='w3-col m4 l4' id='twelvthb3' style='text-align:center;'><div class='b3' style='background-color:black;width:20%;height:50px;padding-top:18px;margin:auto;border: 2px solid black;
+            border-radius: 40%;margin-top:-8px'><div style='color:white;margin-top:-6px;font-weight:bolder ' >87.4</div></div>
+          </div>
+
+          <div class='w3-col m4 l4' id='btechb3' style='text-align:center;'><div class='b3' style='background-color:black;width:20%;height:50px;padding-top:18px;margin:auto;border: 2px solid black;
+            border-radius: 40%;margin-top:-8px'><div style='color:white; margin-top:-6px;font-weight:bolder ' >8.59</div></div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+<div id='skills' style='background-color:#FFF5EE ;position: absolute;width:100% ;height:3560px;'><div style='position:absolute;z-index:2' id='tv'><i class="fa fa-tv" style="font-size:650px;margin-left:330px;margin-top:0px"></i>
+
+
+  <div id='screen' style='position:absolute;top:80px;left:370px;z-index:-1;background:grey;height:410px;width:620px;'>
+    
+    <div id='open' style=' padding:40px ;display:none;color:black'> <b><h1>Skills </h1>with there proficiency </h1><br><br><br><br><h1>Projects</h1> </b><b>(C)</b> &emsp; Completed<br><b>(O)</b>&emsp; Ongoing </div>
+
+   <div id='ch1' style=' padding:40px ;display:block;color:black;margin-top:80px'> <div> <p style='font-size:20px'><b><u>Matlab</u> &emsp; &emsp; &emsp;
+    <div style='float:right;margin-right:20%;border-radius:5px;
+      margin-top:-123px;width:40px;height:100px;background:black;
+      animation-name: level3;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;color:white;text-shadow: 1px 1px red;font-size:12px;opacity:0.4' class='level3'><br><br><br>&nbsp;60%</div><div style='font-size:18px;float:right;margin-right:14%;margin-top:-150px;'>Proficiency</div>
+    <br>Projects:</b></p></div>
+    <ol style='font-size:12px'><li>Realization of Analog Low pass Filters( Butterworth and Chebyshev) using MATLAB [without using in-built functions] <b>(C)</b></li>
+      <li>QPSK, pi/4 QPSK, OQPSK Modulation and Demodulation using MATLAB <b>(C)</b></li>
+    <li>Designed a scientific calculator using MATLAB <b>(C)</b></li>
+    <li>Designed the photo editing user interface using MATLAB <b>(C)</b></li>
+    <li>Designing of spoken word similarity program using MATLAB <b>(O)</b></li>
+    </ol> </div>
+
+    <div id='ch2' style=' padding:40px ;display:none;color:black;margin-top:80px'><div>  <p style='font-size:20px'><b><u>HTML, CSS, Php, JS, MySQL</u> &emsp; &emsp; &emsp;
+     <div style='float:right;margin-right:20%;border-radius:5px;
+      margin-top:-123px;width:40px;height:100px;background:black;
+      animation-name: level3;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;color:white;text-shadow: 1px 1px red;font-size:12px;opacity:0.4' class='level3'><br><br><br>&nbsp;60%</div><div style='font-size:18px;float:right;margin-right:14%;margin-top:-150px;'>Proficiency</div>
+    <br>Projects:</b></p></div>
+    <ol style='font-size:12px'>
+    <li>Website: Title: Know_rk<b>(O)</b></li>
+    <li>Designed a scientific calculator using  Javascript <b>(C)</b></li>
+    </ol> </div>
+
+    <div id='ch3' style=' padding:40px ;display:none;color:black;margin-top:80px'><div>  <p style='font-size:20px'><b><u>HFSS, AWR Studio, Multisim</u> &emsp; &emsp; &emsp;
+     <div style='float:right;margin-right:20%;border-radius:5px;
+      margin-top:-123px;width:40px;height:100px;background:black;
+      animation-name: level1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;color:white;text-shadow: 1px 1px red;font-size:12px;opacity:0.4' class='level5'><br><br><br>&nbsp;50%</div><div style='font-size:18px;float:right;margin-right:14%;margin-top:-150px;'>Proficiency</div>
+    <br>Projects:</b></p></div>
+    <ol style='font-size:12px'>
+    <li>Implementation of 2 Antenna Array Static Beam Steering Front-Ends at 2.4 GHz using HFSS<b>(C)</b></li>
+    <li>Simulation of Bow-Tie Antenna using CST Studio<b>(C)</b></li>
+    </ol> </div>
+
+    <div id='ch4' style=' padding:40px ;display:none;color:black;margin-top:50px'> <div> <p style='font-size:15px'><b><u>C, C++ programming Language</u> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &nbsp; 
+     <div style='float:right;margin-right:15%;border-radius:5px;
+      margin-top:-110px;width:40px;height:90px;background:black;
+      animation-name: level2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;color:white;text-shadow: 1px 1px red;font-size:12px;opacity:0.4' class='level2'><br><br><br>&nbsp;40%</div>
+    </p></div><div style='font-size:15px;float:right;margin-right:11%;margin-top:-130px;'>Proficiency</div><br><br><br>
+    <div><p style='font-size:15px'><b><u>Verilog, 8051 uC programming Language</u> &emsp; &emsp; &emsp;
+        <div style='float:right;margin-right:15%;border-radius:5px;
+      margin-top:-110px;width:40px;height:90px;background:black;
+      animation-name: level1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;color:white;text-shadow: 1px 1px red;font-size:12px;opacity:0.4' class='level1'><br><br><br>&nbsp;25%</div></p></div><br><br><br>
+    <div><p style='font-size:15px'><b><u>Adobe: Photoshop, After Effects, Flash </u> &emsp; &emsp; &emsp;&emsp; &nbsp;
+        <div style='float:right;margin-right:15%;border-radius:5px;
+      margin-top:-110px;width:40px;height:90px;background:black;
+      animation-name: level1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;color:white;text-shadow: 1px 1px red;font-size:12px;opacity:0.4' class='level1'><br><br><br>&nbsp;25%</div></p>
+    </div></div>
+
+    <div id='ch5' style=' padding:40px ;display:none;color:black;'>
+      <p style='font-size:20px'><b><u>Languages:</u> &emsp; &emsp; &emsp;</b></p>
+     <br><br><br><br>
+     <div class='w3-row'>
+    <div class='w3-col m6 l6'><p style='font-size:15px'><b><u>Hindi</u>  &emsp; &emsp;&nbsp;
+        <div style='float:right;margin-right:35%;border-radius:5px;
+      margin-top:-115px;width:40px;height:100px;background:black;
+      animation-name: level4;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;color:white;text-shadow: 1px 1px red;font-size:12px;opacity:0.4' class='level4'><br><br><br>&nbsp;80%</div></b><p><div style='font-size:15px;float:right;margin-right:23%;margin-top:-150px;'>Proficiency</div></div>
+    
+    <div class='w3-col m6 l6'><p style='font-size:15px'>&emsp; &emsp;&nbsp;<b><u>English</u>  &emsp; &emsp;&nbsp;
+        <div style='float:right;margin-right:15%;border-radius:5px;
+      margin-top:-115px;width:40px;height:100px;background:blue;
+      animation-name: level3;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;color:white;text-shadow: 1px 1px red;font-size:12px;opacity:0.4' class='level3'><br><br><br>&nbsp;60%</div></b></p></div><div style='font-size:15px;float:right;margin-right:4%;margin-top:-150px;'>Proficiency</div></div>
+
+    <br><br><br><br>
+     <div class='w3-row'>
+    <div class='w3-col m6 l6'><p style='font-size:15px'><b><u>Spanish</u>  &emsp; &emsp;&nbsp;gg
+        <div style='float:right;margin-right:35%;border-radius:5px;
+      margin-top:-115px;width:40px;height:100px;background:red;
+      animation-name: level1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;color:white;text-shadow: 1px 1px red;font-size:12px;opacity:0.4' class='level1'><br><br><br>&nbsp;25%</div></b></p></div>
+    
+    <div class='w3-col m6 l6'><p style='font-size:15px'>&emsp; &emsp;&nbsp;<b><u>German</u>  &emsp; &emsp;&nbsp;
+        <div style='float:right;margin-right:15%;border-radius:5px;
+      margin-top:-115px;width:40px;height:100px;background:yellow;
+      animation-name: level1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;color:white;text-shadow: 1px 1px red;font-size:12px;opacity:0.4' class='level1'><br><br><br>&nbsp;30%</div></b><p></div></div>
+
+    </div>
+
+</div>
+
+
+<div id='tvname' style='position:absolute;top:40px;left:570px;z-index:5;color:grey'><h3><b>SKILLS & PROJECTS</b>
+</div><div id='chbuttonl' style='position:absolute;top:475px;left:800px;z-index:5;color:grey'><i class="fa fa-toggle-left" style="font-size:24px"></i></div>
+
+<div id='chbuttonr' style='position:absolute;top:475px;left:830px;z-index:5;color:grey;'><i class="fa fa-toggle-right" style="font-size:24px"></i></div>
+
+<div id='powerbutton' style='position:absolute;top:475px;left:430px;z-index:5;color:grey'><i class="fa fa-power-off" style="font-size:24px"></i></div>
+
+</div></div>
+</div>
+
+
+<div id='last' style='background:white;height:1800px;width:100%;margin-top:-300px'><br>
+ 
+  <div id='end' style='border:1px solid black;border-radius:15px;position:relative;top:20px;left:38%;width:25%;background:white;display:block;height:520px'><div id='co'><div id='idname' style='text-align:center;font-size:20px;padding:10px;background:#D3D3D3;width:100%;padding:28px;border-radius:15px 15px 2px 2px ;'><b id='bidname'>Co-Curricular Activities</b></div>
+<div id='details' style='padding-left:15px;'>
+<ul><li>Attended a robotics workshop conducted by ISTE.</li><li>I was a part of Hindi Literary Association, VIT and attended and participated in various events conducted by the club.</li><li>Attended TUC organized by IET.</li></ul></div>
+</div>
+
+<div id='pd' style='display:none' ><div id='name' style='text-align:center;font-size:30px;padding:10px;background:#D3D3D3;width:100%;padding:20px;border-radius:15px 15px 2px 2px ;'><b>Rahul Khanna</b></div><div id='pic' style='padding-left:40px;'><img src="images/rk.jpg" width=250px height=250px></div>
+<div id='details' style='padding-left:40px;'><pre><b>Date of Birth  : </b>29<sup>th</sup> Oct,1994
+<b>Gender         : </b>Male
+<b>Nationality    : </b>Indian
+<b>Father's Name  : </b>Ashok Khanna
+<b>Permanent Add. : </b>1-A, St. no-5
+                 New Krishna Nagar
+                 Delhi-110051</pre></div>
+</div>
+
+</div>
+  
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+  
+
+
+</body>
+
+</html>
+
+
+
+
+
