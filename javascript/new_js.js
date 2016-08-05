@@ -119,19 +119,19 @@ $(window).scroll(function(){
     });
 	
 	$("#teb").css({
-        "border" :'2px solid red','background-image':'url(nlp.jpg)',
+        "border" :'2px solid red','background-image':'url(images/nlp.jpg)',
 'background-size':' 100%','background-repeat':'no-repeat'}
         
     );
 
     $("#twb").css({
-        "border" :'2px solid red','background-image':'url(nlp.jpg)',
+        "border" :'2px solid red','background-image':'url(images/nlp.jpg)',
 'background-size':' 100%','background-repeat':'no-repeat'}
         
     );
 
     $("#vib").css({
-        "border" :'2px solid red','background-image':'url(vit.jpg)',
+        "border" :'2px solid red','background-image':'url(images/vit.jpg)',
 'background-size':' 120%','background-repeat':'no-repeat'}
         
     );
